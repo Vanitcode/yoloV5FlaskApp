@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <img src="{{ result_image }}" alt="Image analyzed">
+    <br/>
+    <form action="{{ url_for('predict') }}">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Index</button>
+    </form>
+</body>
+</html>
