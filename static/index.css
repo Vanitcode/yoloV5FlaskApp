@@ -26,3 +26,17 @@ body {
     padding: 10px;
     font-size: 16px;
 }
+
+.form-index{
+    width: 100%;
+    max-width: 330px;
+}
+
+.button-index{
+    padding-top: 30px;
+}
+
+img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}

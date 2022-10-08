@@ -2,12 +2,34 @@
 <html>
 <head>
     <title>Index</title>
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+        .content {
+            max-width: 500px;
+            margin: auto;
+        }
+      </style>
+    <link rel="stylesheet" href="/static/index.css">
 </head>
-<body>
-    <img src="{{ result_image }}" alt="Image analyzed">
-    <br/>
-    <form action="{{ url_for('predict') }}">
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Index</button>
-    </form>
+<body >
+    <div class="content">
+        <img src="{{ result_image }}" alt="Image analyzed">
+    <br>
+        <form action="{{ url_for('predict') }}" class="button-index">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Index</button>
+        </form>
+    </div>
+    
+    
 </body>
 </html>

@@ -19,12 +19,23 @@
     <link rel="stylesheet" href="/static/index.css">
 
     <title>yolov5 object detection</title>
+    
   </head>
   <body class="text-center">
     <form class="form-signin" method=post enctype=multipart/form-data>
         <h1 class="h3 mb-3 font-weight-normal">Upload any image</h1>
         <input type="file" name="file" class="form-control-file" id="inputfile">
         <br/>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+        
         <button class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>
         <p class="mt-5 mb-3 text-muted">Fork from:
           <a href="https://github.com/robmarkcole/yolov5-flask" target="_blank" rel="noopener noreferrer">
